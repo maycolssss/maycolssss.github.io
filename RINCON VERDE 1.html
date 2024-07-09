@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RINCÓN VERDE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        header {
+            background-image: url('https://mediaim.expedia.com/destination/1/080e2221354717f27215e7f36e18268b.jpg'); /* Reemplaza 'loreto-portada.jpg' con tu imagen de portada */
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Abarca toda la altura de la ventana */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative; /* Para posicionar el botón */
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            padding: 0;
+        }
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        .ver-mas {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        .ver-mas:hover {
+            background-color: #45a049;
+        }
+        .container {
+            padding: 20px;
+            display: none; /* Inicialmente oculto */
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            margin-bottom: 20px;
+            background-size: cover;
+            background-position: center;
+            color: #333; /* Color de texto sobre fondo claro */
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-content.historia {
+            background-image: url('https://www.holyart.es/blog/wp-content/uploads/sites/13/2022/11/La-Virgen-de-Loreto.jpeg'); /* URL de la imagen de Historia */
+            color: #FFFFFF;
+        }
+        .tab-content.culturas {
+            background-image: url('https://i0.wp.com/www.actualidadambiental.pe/wp-content/uploads/2014/01/exposici%C3%B3n_amazon%C3%ADa_loreto_spda.jpg'); /* URL de la imagen de Culturas */
+            color: #ffffff;
+        }
+        .tab-content.lenguajes {color:#F79F00 }
+        }
+        .tab-content.flora-fauna {
+            background-image: url('https://turismoi.pe/uploads/photo/version3/photo_file/64520/home_dd6acd9d-529f-40e1-95f0-29d1cf55c506.jpg'); /* URL de la imagen de Flora y Fauna */
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            margin: 10px;
+            width: 300px;
+            height: auto;
+            border: 2px solid #4CAF50;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>RINCÓN VERDE</h1>
+            <h2>LORETO</h2>
+            <p>Descubre la maravilla</p>
+            <button class="ver-mas" onclick="showContent()">Ver más</button>
+        </div>
+    </header>
+    <div class="container" id="main-content">
+        <nav>
+            <a class="tab-link" onclick="openTab(event, 'historia')">Historia</a>
+            <a class="tab-link" onclick="openTab(event, 'culturas')">Culturas</a>
+            <a class="tab-link" onclick="openTab(event, 'lenguajes')">Lenguajes</a>
+            <a class="tab-link" onclick="openTab(event, 'flora-fauna')">Flora y Fauna</a>
+        </nav>
+        <div id="historia" class="tab-content historia">
+            <h2>Historia</h2>
+            <p>Claro, aquí tienes una breve historia distribuida de Loreto, Perú:
+
+<h1>1. Época Precolombina Cultura Nativa:</h1> 
+Antes de la llegada de los europeos, la región de Loreto estaba habitada por diversas tribus amazónicas, como los Bora, Huitoto y Yagua, que vivían en armonía con la selva.
+<h1>2. Conquista y Colonización:</h1>
+Exploración Española: En el siglo XVI, exploradores españoles, como Francisco de Orellana, fueron los primeros europeos en navegar el río Amazonas. La región se mantuvo en gran parte inexplorada durante mucho tiempo.
+Misiones Jesuitas: En el siglo XVII, los jesuitas establecieron misiones en la región para evangelizar a las tribus locales y desarrollar asentamientos permanentes.
+<h1>3. Siglo XIX:</h1> 
+Boom del Caucho Explosión Económica: En la segunda mitad del siglo XIX, Loreto experimentó un auge económico debido a la explotación del caucho. Iquitos se convirtió en un próspero puerto fluvial y centro comercial.
+Inmigración y Desarrollo: La fiebre del caucho atrajo a inmigrantes de Europa y otras partes de Perú, lo que contribuyó al desarrollo urbano y económico de la región.
+<h1>4. Siglo XX:</h1>
+ Decadencia y Diversificación Declive del Caucho: Con la caída de la industria del caucho a principios del siglo XX, Loreto enfrentó desafíos económicos. Sin embargo, la región comenzó a diversificar su economía hacia la pesca, la madera y otros recursos naturales.
+Conflictos Fronterizos: Durante el siglo XX, Loreto estuvo involucrado en conflictos territoriales con países vecinos, como la Guerra del Pacífico y la Guerra Peruano-Ecuatoriana.
+<h1>5. Era Contemporánea Desarrollo Sostenible:</h1> 
+En las últimas décadas, Loreto ha enfocado esfuerzos en el ecoturismo y la conservación de la biodiversidad amazónica. Proyectos de desarrollo sostenible buscan equilibrar el crecimiento económico con la preservación del medio ambiente.
+Cultura y Turismo: Loreto se ha convertido en un destino turístico importante, conocido por su rica cultura amazónica, biodiversidad y la ciudad de Iquitos, que sigue siendo un importante puerto fluvial y centro cultural.
+Loreto tiene una historia rica y diversa que refleja su papel como un crisol de culturas indígenas, influencias europeas y su conexión profunda con la selva amazónica.</p>
+        </div>
+        <div id="culturas" class="tab-content culturas">
+            <h2>Culturas</h2>
+            <p>
+Loreto, ubicado en la Amazonía peruana, posee una rica y diversa cultura influenciada por sus comunidades indígenas, la naturaleza circundante y su historia. A continuación, se presenta una distribución de información sobre la cultura de Loreto en diferentes aspectos:
+
+<h1>1. Comunidades Indígenas</h1>
+ Loreto alberga una gran variedad de comunidades indígenas, cada una con sus propias tradiciones y formas de vida. Entre las principales se encuentran:
+
+Los Boras: Conocidos por sus coloridas danzas y artesanías, los Boras tienen una rica tradición oral y ceremonial.
+Los Yaguas: Reconocidos por su habilidad en la caza y su conocimiento de la selva, los Yaguas mantienen tradiciones ancestrales en su día a día.
+Los Shipibos-Conibos: Famosos por sus textiles y cerámica, tienen un profundo vínculo espiritual con la naturaleza.
+
+<h1>2. Festividades y Celebraciones</h1> 
+Las festividades en Loreto están profundamente ligadas a su entorno y tradiciones:
+
+Fiesta de San Juan (24 de junio):
+ Celebrada con danzas, música y comidas típicas como el juane (plato de arroz, carne y especias envuelto en hojas de bijao).
+Carnaval Amazónico: 
+Con desfiles, concursos de danzas y trajes típicos, refleja la alegría y creatividad de la región.
+
+<h1>3. Gastronomía</h1>
+La cocina de Loreto es una fusión de ingredientes amazónicos y técnicas tradicionales:
+
+Juane: 
+Plato emblemático preparado con arroz, especias, carne y envuelto en hojas de bijao.
+Tacacho con cecina: Plátano verde frito y machacado acompañado de carne ahumada.
+Inchicapi:
+ Sopa de gallina con maní y yuca, muy nutritiva y tradicional.
+
+<h1>4. Música y Danzas</h1>
+La música y las danzas en Loreto son expresiones vibrantes de su cultura:
+
+Pandilla Loretana: Danza típica de la región, realizada en grupo, que simboliza la alegría y unión.
+Ikaros: Cánticos tradicionales de los chamanes durante las ceremonias de ayahuasca.
+
+<h1>5. Artesanías</h1>
+Las artesanías de Loreto son una muestra del talento y creatividad de sus habitantes:
+
+Cerámica y tejidos: Elaborados principalmente por las mujeres Shipibas, con diseños que reflejan su cosmovisión.
+Cestería: Utilizando fibras naturales, las comunidades crean cestas, sombreros y otros objetos utilitarios y decorativos.
+
+<h1>6. Creencias y Tradiciones Espirituales</h1>
+Las prácticas espirituales en Loreto están íntimamente relacionadas con la naturaleza:
+
+Chamanismo: Los chamanes juegan un papel central en la vida espiritual, utilizando plantas medicinales como la ayahuasca para curaciones y rituales.
+Mitos y leyendas: Historias sobre espíritus de la selva, como el "Chullachaqui", forman parte de la rica tradición oral.
+
+<h1>7. Influencia Mestiza</h1>
+La cultura de Loreto también refleja la influencia de la colonización y la mezcla cultural:
+
+Arquitectura colonial: En ciudades como Iquitos, se pueden observar edificios con influencia colonial y europea.
+Literatura y arte: Escritores y artistas loretanos han contribuido a la cultura nacional, destacando la belleza y misterio de la Amazonía.
+
+La cultura de Loreto es un mosaico de tradiciones ancestrales, celebraciones festivas, rica gastronomía y un profundo respeto por la naturaleza, que se refleja en cada aspecto de la vida diaria de sus habitantes.</p>
+        </div>
+        <div id="lenguajes" class="tab-content lenguajes">
+            <h2>Lenguajes</h2>
+            <p>En Loreto, Perú, la diversidad lingüística es rica y se refleja en la coexistencia de varias lenguas indígenas y el español. Aquí tienes una distribución general de los lenguajes hablados en esta región:
+
+<h1>Lenguas Indígenas</h1>
+Quechua</h1>
+
+Región: Principalmente en la zona de Loreto, aunque menos prevalente que en otras regiones andinas.
+Características: Es una de las lenguas indígenas más habladas en Perú, con diversas variantes dialectales.
+
+<h1>Shipibo-Conibo</h1>
+
+Región: A lo largo de los ríos Ucayali y Marañón.
+Características: Lengua perteneciente a la familia Pano, con una rica tradición oral y cultural.
+
+<h1>Aguaruna (Awajún)</h1>
+
+Región: Principalmente en la provincia de Datem del Marañón.
+Características: Parte de la familia lingüística Jívaro, con un fuerte enfoque en la naturaleza y la ecología en su vocabulario.
+
+<h1>Cocama-Cocamilla</h1>
+
+Región: A lo largo del río Amazonas y sus afluentes.
+Características: Lengua de la familia Tupí-Guaraní, conocida por su resistencia cultural y lingüística.
+
+<h1>Yagua</h1>
+
+Región: Áreas cercanas a los ríos Putumayo y Napo.
+Características: Una lengua aislada, con una gramática y fonología únicas.
+Bora
+
+Región: A lo largo del río Ampiyacu y sus afluentes.
+Características: Lengua de la familia Witoto, conocida por sus complicadas formas verbales.
+
+<h1>Huitoto (Witoto)</h1>
+
+Región: Río Putumayo y sus alrededores.
+Características: Utiliza sistemas de tonalidad complejos y posee una rica tradición cultural.
+
+<h1>Lengua Oficial</h1>
+
+Región: Todo Loreto.
+Características: Es el idioma oficial y el más hablado en la región, utilizado en la educación, el gobierno y los medios de comunicación.
+
+Influencias y Bilingüismo</h1>
+
+En Loreto, es común encontrar comunidades que son bilingües o multilingües, utilizando tanto el español como su lengua indígena en la vida cotidiana.
+Los programas de educación bilingüe intercultural han sido implementados para preservar y promover las lenguas indígenas, especialmente en las áreas rurales.
+
+<h1>Situación Actual</h1>
+
+Preservación Lingüística: Hay esfuerzos significativos por parte del gobierno y organizaciones no gubernamentales para documentar y revitalizar estas lenguas indígenas.
+Desafíos: Las lenguas indígenas enfrentan desafíos debido a la urbanización y la globalización, que fomentan el uso predominante del español.</p>
+        </div>
+        <div id="flora-fauna" class="tab-content flora-fauna">
+            <h2>Flora y Fauna</h2>
+            <p>Loreto, una región en la selva amazónica de Perú, es conocida por su biodiversidad excepcional. Aquí tienes una distribución general de la flora y fauna en Loreto:
+
+<h1>Flora</h1>
+<h1>Árboles y Plantas de la Selva Alta:</h1>
+
+Caoba (Swietenia macrophylla): Árbol maderable de gran tamaño.
+Cedro (Cedrela odorata): Otro árbol maderable muy valorado.
+Capirona (Calycophyllum spruceanum): Conocido por su corteza que se pela naturalmente.
+Oje (Ficus insipida): Utilizado en la medicina tradicional.
+
+<h1>Plantas Medicinales:</h1>
+
+Ayahuasca (Banisteriopsis caapi): Utilizada en ceremonias chamánicas.
+Uña de Gato (Uncaria tomentosa): Con propiedades antiinflamatorias y antioxidantes.
+Chuchuhuasi (Maytenus macrocarpa): Usado para aliviar dolores musculares y articulares.
+
+<h1>Plantas Alimenticias:</h1>
+
+Aguaje (Mauritia flexuosa): Fruta rica en vitamina A.
+Camu Camu (Myrciaria dubia): Fruta con alto contenido de vitamina C.
+Palmito (Euterpe precatoria): Utilizado en ensaladas y otros platos.
+
+<h1>Fauna</h1>
+<h1>Mamíferos:</h1>
+
+Jaguar (Panthera onca): El felino más grande de América.
+Oso Hormiguero (Myrmecophaga tridactyla): Conocido por su lengua larga para capturar hormigas y termitas.
+Mono Aullador (Alouatta seniculus): Reconocido por sus fuertes vocalizaciones.
+
+<h1>Aves:</h1>
+
+Guacamayo Azul y Amarillo (Ara ararauna): Ave colorida y emblemática de la región.
+Tucán (Ramphastos tucanus): Con su característico pico grande y colorido.
+Hoatzin (Opisthocomus hoazin): Ave única con un aspecto prehistórico.
+
+<h1>Reptiles y Anfibios:</h1>
+
+Anaconda (Eunectes murinus): Una de las serpientes más grandes del mundo.
+Rana Dardo Venenoso (Dendrobatidae): Pequeñas ranas conocidas por su piel tóxica.
+Caimán Negro (Melanosuchus niger): Un depredador grande y poderoso.
+
+<h1>Peces:</h1>
+
+Piraña (Serrasalmus spp.): Famosa por sus dientes afilados y comportamiento agresivo.
+Paiche (Arapaima gigas): Uno de los peces de agua dulce más grandes del mundo.
+Dorado (Salminus brasiliensis): Popular entre los pescadores deportivos.
+
+<h1>Insectos:</h1>
+
+Mariposa Morpho (Morpho spp.): Conocida por sus alas de color azul iridiscente.
+Escarabajo Hércules (Dynastes hercules): Uno de los escarabajos más grandes del mundo.
+Hormiga Bala (Paraponera clavata): Conocida por su picadura extremadamente dolorosa.
+
+<h1>Ecosistemas y Áreas Protegidas</h1>
+<h1>Parque Nacional Pacaya Samiria:</h1>
+
+Ubicación: Al oeste de Iquitos.
+Características: Áreas inundables, con una rica diversidad de flora y fauna acuática y terrestre.
+
+<h1>Reserva Nacional Allpahuayo Mishana:</h1>
+
+Ubicación: Cerca de Iquitos.
+Características: Bosques de varillales y arena blanca, hogar de muchas especies endémicas.
+
+<h1>Reserva Comunal Tamshiyacu Tahuayo:</h1>
+
+Ubicación: Al sureste de Iquitos.
+Características: Bosques primarios y secundarios con gran biodiversidad.
+Loreto es un verdadero tesoro de biodiversidad, con una increíble variedad de especies que contribuyen a su riqueza ecológica.</p>
+        </div>
+        <div class="gallery">
+            <img src="imagen1.jpg" alt="Imagen de Loreto 1">
+            <img src="imagen2.jpg" alt="Imagen de Loreto 2">
+            <img src="imagen3.jpg" alt="Imagen de Loreto 3">
+            <img src="imagen4.jpg" alt="Imagen de Loreto 4">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Loreto, Perú.Maycol huaira Ortis 5to B.</p>
+    </footer>
+
+    <script>
+        function showContent() {
+            var content = document.getElementById("main-content");
+            content.style.display = "block"; // Mostrar el contenido principal
+            content.scrollIntoView({ behavior: "smooth" }); // Desplazar hacia el contenido
+        }
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
